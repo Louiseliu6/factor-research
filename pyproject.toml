@@ -1,0 +1,16 @@
+[project]
+name = "factor-research"
+version = "0.1.0"
+description = "Cross-sectional equity factor research: momentum, reversal, low volatility"
+requires-python = ">=3.10"
+dependencies = ["numpy", "pandas", "matplotlib", "yfinance", "statsmodels"]
+
+[project.optional-dependencies]
+dev = ["pytest", "jupyter"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
