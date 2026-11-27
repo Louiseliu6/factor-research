@@ -36,5 +36,6 @@ print(pd.DataFrame(rows).T.round(3).to_string())
 pd.DataFrame(curves).plot(figsize=(9, 5), title=f"Long-short quintile portfolios, net of {args.cost_bps:.0f} bps")
 plt.ylabel("Growth of 1")
 plt.tight_layout()
-plt.savefig("reports/figures/equity_curves.png", dpi=150)
-print("Saved reports/figures/equity_curves.png")
+suffix = "_synthetic" if args.synthetic else ""
+plt.savefig(f"reports/figures/equity_curves{suffix}.png", dpi=150)
+print(f"Saved reports/figures/equity_curves{suffix}.png")
